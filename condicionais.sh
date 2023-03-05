@@ -1,11 +1,26 @@
 #!/usr/bin/env bash
 
-VAR1="Loki"
-VAR2="Loki"
+VAR1=1
+VAR2=1
 
-[ "$VAR1" = "$VAR" ] && echo "São iguais"
+if [[ $VAR1 = $VAR2 ]]; then
+	echo "Iguais"
+fi
 
-VAR3="Loki"
-VAR4="Henrique"
+if [[ $VAR1 = $VAR2 ]]
+then
+	echo "Iguais"
+fi
 
-[ "$VAR3" = "$VAR4" ] || echo "Não são iguais"
+if test  $VAR1 = $VAR2; then
+	echo "Iguais"
+fi
+
+if test  $VAR1 = $VAR2
+then
+	echo "Iguais"
+fi
+
+[ $VAR1 = $VAR2 ] && echo "Iguais"
+
+[ $VAR1 = $VAR2 ] || echo "Não iguais"
